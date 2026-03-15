@@ -25,9 +25,22 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+**Purpose:** A number-guessing game where the player tries to identify a secret number within a limited number of attempts, receiving higher/lower hints after each guess.
+
+**Bugs found:**
+- Hints were inverted — "Too High" displayed "Go HIGHER!" instead of "Go LOWER!" (and vice versa)
+- Every even-numbered attempt secretly cast the target number to a string, breaking numeric comparison
+- Hard difficulty used a range of 1–50, which is easier (not harder) than Normal's 1–100
+- The attempts counter initialized to `1` instead of `0`, silently consuming one attempt on the first guess
+- All functions in `logic_utils.py` raised `NotImplementedError`, causing every test to fail
+
+**Fixes applied:**
+- Corrected hint messages in `check_guess` inside `logic_utils.py`
+- Removed the string-conversion block in `app.py`; secret is always passed as an integer
+- Changed Hard difficulty range to 1–200 in `logic_utils.py`
+- Initialized `attempts` to `0` in `app.py`
+- Implemented all four game logic functions in `logic_utils.py` and updated `app.py` to import from there
+- Fixed tests to properly unpack the `(outcome, message)` tuple returned by `check_guess`; added 6 new targeted tests
 
 ## 📸 Demo
 
