@@ -44,8 +44,31 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+> **To add your screenshot:** Run `python -m streamlit run app.py`, play the game until you win, take a screenshot (Windows: `Win + Shift + S`), save it as `demo_win.png` in this folder, then replace this line with `![Winning game](demo_win.png)`.
+
+### pytest Results (Challenge 1 — Edge-Case Testing)
+
+All 9 tests pass after the repairs:
+
+```
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: ai110-module1show-gameglitchinvestigator-starter
+collected 9 items
+
+tests/test_game_logic.py::test_winning_guess                         PASSED
+tests/test_game_logic.py::test_guess_too_high                        PASSED
+tests/test_game_logic.py::test_guess_too_low                         PASSED
+tests/test_game_logic.py::test_too_high_message_says_go_lower        PASSED
+tests/test_game_logic.py::test_too_low_message_says_go_higher        PASSED
+tests/test_game_logic.py::test_hard_difficulty_range_is_wider_than_normal PASSED
+tests/test_game_logic.py::test_parse_guess_valid                     PASSED
+tests/test_game_logic.py::test_parse_guess_empty                     PASSED
+tests/test_game_logic.py::test_parse_guess_non_numeric               PASSED
+
+============================== 9 passed in 0.04s ==============================
+```
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+> **Challenge 4 screenshot:** If you complete Challenge 4, save your screenshot as `demo_ui.png` in this folder and replace this line with `![Enhanced UI](demo_ui.png)`.
