@@ -48,6 +48,8 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ### pytest Results (Challenge 1 — Edge-Case Testing)
 
+![alt text](image-2.png)
+
 All 9 tests pass after the repairs:
 
 ```
