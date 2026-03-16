@@ -1,6 +1,6 @@
 # 🎮 Game Glitch Investigator: The Impossible Guesser
 
-## 🚨 The Situation
+## The Situation
 
 You asked an AI to build a simple "Number Guessing Game" using Streamlit.
 It wrote the code, ran away, and now the game is unplayable. 
@@ -9,12 +9,12 @@ It wrote the code, ran away, and now the game is unplayable.
 - The hints lie to you.
 - The secret number seems to have commitment issues.
 
-## 🛠️ Setup
+## Setup
 
 1. Install dependencies: `pip install -r requirements.txt`
 2. Run the broken app: `python -m streamlit run app.py`
 
-## 🕵️‍♂️ Your Mission
+## Your Mission
 
 1. **Play the game.** Open the "Developer Debug Info" tab in the app to see the secret number. Try to win.
 2. **Find the State Bug.** Why does the secret number change every time you click "Submit"? Ask ChatGPT: *"How do I keep a variable from resetting in Streamlit when I click a button?"*
@@ -23,7 +23,7 @@ It wrote the code, ran away, and now the game is unplayable.
    - Run `pytest` in your terminal.
    - Keep fixing until all tests pass!
 
-## 📝 Document Your Experience
+## Document Your Experience
 
 **Purpose:** A number-guessing game where the player tries to identify a secret number within a limited number of attempts, receiving higher/lower hints after each guess.
 
@@ -42,9 +42,9 @@ It wrote the code, ran away, and now the game is unplayable.
 - Implemented all four game logic functions in `logic_utils.py` and updated `app.py` to import from there
 - Fixed tests to properly unpack the `(outcome, message)` tuple returned by `check_guess`; added 6 new targeted tests
 
-## 📸 Demo
+## Demo
 
-> **To add your screenshot:** Run `python -m streamlit run app.py`, play the game until you win, take a screenshot (Windows: `Win + Shift + S`), save it as `demo_win.png` in this folder, then replace this line with `![Winning game](demo_win.png)`.
+![alt text](image.png)
 
 ### pytest Results (Challenge 1 — Edge-Case Testing)
 
@@ -68,6 +68,7 @@ tests/test_game_logic.py::test_parse_guess_non_numeric               PASSED
 
 ============================== 9 passed in 0.04s ==============================
 ```
+![alt text](image-1.png)
 
 ## 🚀 Stretch Features
 
